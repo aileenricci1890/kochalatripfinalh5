@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>K'ochala Trip — Descubre Cochabamba</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ============================================================
+       NAVBAR
+  ============================================================ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">
+        <img src="./images/logo.png" alt="Logo.png" class="nav-logo-img" />
+        <span class="logo-k">K'</span><span class="logo-ochala">ochala</span>
+        <span class="logo-trip">Trip</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#historia">Historia</a></li>
+        <li><a href="#restaurantes">Restaurantes</a></li>
+        <li><a href="#actividades">Actividades</a></li>
+        <li><a href="#transporte">Transporte</a></li>
+        <li><a href="#hoteles">Hoteles</a></li>
+        <li><a href="#contacto" class="nav-cta">Contacto</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ============================================================
+       HERO SECTION
+  ============================================================ -->
+  <section class="hero" id="hero">
+    <!-- Animated background blobs -->
+    <div class="hero-blob blob1"></div>
+    <div class="hero-blob blob2"></div>
+    <div class="hero-blob blob3"></div>
+
+    <!-- Floating particles -->
+    <div class="particles" id="particles"></div>
+
+    <!-- Decorative geometric shapes -->
+    <div class="hero-shape shape-circle"></div>
+    <div class="hero-shape shape-triangle"></div>
+    <div class="hero-shape shape-dot-grid"></div>
+
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        Bolivia · Cochabamba
+      </div>
+      <h1 class="hero-title">
+        Descubre<br/>
+        <span class="title-highlight">Cochabamba</span><br/>
+        como nunca antes
+      </h1>
+      <p class="hero-subtitle">
+        La ciudad jardín de Bolivia te espera con su gastronomía inigualable,<br/>
+        paisajes imponentes y una cultura vibrante llena de aventura.
+      </p>
+      <div class="hero-actions">
+        <a href="#actividades" class="btn-primary">
+          <span>Explorar ahora</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+        <a href="#historia" class="btn-ghost">
+          Nuestra historia
+        </a>
+      </div>
+
+      <!-- Stats row -->
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-number">+200</span>
+          <span class="stat-label">Destinos</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-number">4.8★</span>
+          <span class="stat-label">Valoración</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-number">12K+</span>
+          <span class="stat-label">Viajeros</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hero illustration -->
+    <div class="hero-visual">
+      <div class="visual-frame main-frame">
+        <div class="frame-img">
+ <img src="https://i.pinimg.com/736x/25/7b/1e/257b1eb6fb04b93d3c197eece8029624.jpg"
+          />
+        </div>
+      </div>
+      <div class="visual-card card-float-1">
+        <span class="vcard-emoji">🌄</span>
+        <div>
+          <div class="vcard-title">Cocha que linda estás!</div>
+          <div class="vcard-sub">Vista panorámica</div>
+        </div>
+      </div>
+      <div class="visual-card card-float-2">
+        <span class="vcard-emoji">🍽️</span>
+        <div>
+          <div class="vcard-title">Gastronomía única</div>
+          <div class="vcard-sub">Sabores auténticos</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="scroll-indicator">
+      <div class="scroll-wheel"></div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CARRUSEL / GALERÍA DESTINOS
+  ============================================================ -->
+  <section class="carousel-section">
+    <div class="carousel-track" id="carouselTrack">
+      <div class="carousel-item"> Parque Tunari</div>
+      <div class="carousel-item"> Cristo de la Concordia</div>
+      <div class="carousel-item"> La Cancha</div>
+      <div class="carousel-item"> La Recoleta</div>
+      <div class="carousel-item"> Feria Exposición</div>
+      <div class="carousel-item"> Chicha Cochabambina</div>
+      <div class="carousel-item"> Parque Científico</div>
+      <div class="carousel-item"> Festival de Danzas</div>
+      <!-- duplicate for infinite loop -->
+      <div class="carousel-item"> Parque Tunari</div>
+      <div class="carousel-item"> Cristo de la Concordia</div>
+      <div class="carousel-item"> La Cancha</div>
+      <div class="carousel-item"> La Recoleta</div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       HISTORIA DE COCHABAMBA
+  ============================================================ -->
+  <section class="section historia-section" id="historia">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag"> Historia</span>
+        <h2 class="section-title">La Ciudad Jardín<br/><em>de Bolivia</em></h2>
+        <p class="section-desc">
+          Cochabamba, cuyo nombre proviene del quechua "Qhucha Pampa" (llanura del lago),
+          es el corazón cultural y gastronómico de Bolivia. Con más de 400 años de historia,
+          es una ciudad vibrante que mezcla tradición y modernidad.
+        </p>
+      </div>
+
+      <!-- Timeline -->
+      <div class="timeline">
+        <div class="timeline-item reveal" data-delay="0">
+          <div class="tl-icon">🇧🇴</div>
+          <div class="tl-content">
+            <div class="tl-year">1571</div>
+            <h3 class="tl-title">Fundación española</h3>
+            <p>Fundada el 2 de agosto de 1571 por el capitán Sebastián Barba de Padilla como Villa de Oropeza.</p>
+          </div>
+        </div>
+        <div class="timeline-item reveal" data-delay="100">
+          <div class="tl-icon">🇧🇴</div>
+          <div class="tl-content">
+            <div class="tl-year">1812</div>
+            <h3 class="tl-title">Las Heroínas de la Coronilla</h3>
+            <p>Las mujeres cochabambinas defendieron heroicamente la ciudad ante el ejército realista, símbolo del valor local.</p>
+          </div>
+        </div>
+        <div class="timeline-item reveal" data-delay="200">
+          <div class="tl-icon">🇧🇴</div>
+          <div class="tl-content">
+            <div class="tl-year">1825</div>
+            <h3 class="tl-title">Independencia de Bolivia</h3>
+            <p>Cochabamba se une a la república independiente de Bolivia, convirtiéndose en uno de sus departamentos fundadores.</p>
+          </div>
+        </div>
+        <div class="timeline-item reveal" data-delay="300">
+          <div class="tl-icon">🇧🇴</div>
+          <div class="tl-content">
+            <div class="tl-year">1994</div>
+            <h3 class="tl-title">Ciudad Jardín</h3>
+            <p>Reconocida oficialmente como "La Ciudad Jardín de Bolivia" por su clima primaveral y abundante vegetación urbana.</p>
+          </div>
+        </div>
+        <div class="timeline-item reveal" data-delay="400">
+          <div class="tl-icon">🇧🇴</div>
+          <div class="tl-content">
+            <div class="tl-year">2004</div>
+            <h3 class="tl-title">Cristo de la Concordia</h3>
+            <p>Inaugurado como el Cristo más alto del mundo (34.2m), se convierte en el ícono turístico por excelencia de la ciudad.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Facts chips -->
+      <div class="facts-row reveal">
+        <div class="fact-chip">
+          <span class="fact-icon"></span>
+          <div><strong>18°C promedio</strong><br/>Clima ideal todo el año</div>
+        </div>
+        <div class="fact-chip">
+          <span class="fact-icon"></span>
+          <div><strong>1.2 millones</strong><br/>Habitantes</div>
+        </div>
+        <div class="fact-chip">
+          <span class="fact-icon"></span>
+          <div><strong>2,558 msnm</strong><br/>Altitud</div>
+        </div>
+        <div class="fact-chip">
+          <span class="fact-icon"></span>
+          <div><strong>Capital gastronómica</strong><br/>de Bolivia</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       RESTAURANTES
+  ============================================================ -->
+  <section class="section restaurantes-section" id="restaurantes">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag"> Gastronomía</span>
+        <h2 class="section-title">Restaurantes<br/><em>Recomendados</em></h2>
+        <p class="section-desc">
+          Cochabamba es la capital gastronómica de Bolivia. Aquí la comida es celebración,
+          reunión y orgullo. Estos son los imperdibles.
+        </p>
+      </div>
+
+      <div class="cards-grid">
+
+        <div class="card rest-card reveal" data-delay="0">
+          <div class="card-img">
+            <div class="card-category">🍖 Parrillada</div>
+            <!-- ✅ REEMPLAZA "images/restaurante-fogon.png" con tu ilustración -->
+            <img
+              src="https://i.pinimg.com/736x/62/60/3d/62603d9835918d9b893372c42ef09c14.jpg"
+              alt="El Fogón de María"
+              class="card-illustration-img"
+            />
+          </div>
+          <div class="card-body">
+            <div class="card-rating">⭐ 4.9</div>
+            <h3 class="card-name">El Fogón de María</h3>
+            <p class="card-type">Parrillada · Cocina boliviana</p>
+            <p class="card-location">📍 Av. Ballivián 1234, Quillacollo</p>
+            <p class="card-desc">La mejor parrillada de la ciudad con cortes locales y chorizos artesanales. Imperdible el chicharrón.</p>
+            <a href="#contacto" class="card-btn">Ver más →</a>
+          </div>
+        </div>
+
+        <div class="card rest-card reveal" data-delay="100">
+          <div class="card-img">
+            <div class="card-category">🥘 Tradicional</div>
+            <!-- ✅ REEMPLAZA "images/restaurante-peta.png" con tu ilustración -->
+            <img
+              src="https://www.boliviaentusmanos.com/amarillas1/businesscard/imagenes/restaurante-la-casa-del-gordo-4.jpg"
+              alt="Doña Peta Picantería"
+              class="card-illustration-img"
+            />
+          </div>
+          <div class="card-body">
+            <div class="card-rating">⭐ 4.8</div>
+            <h3 class="card-name">La Casa del Gordo</h3>
+            <p class="card-type">Platos Típicos · Tradicional boliviana</p>
+            <p class="card-location">📍Plazuela de Cala Cala, Calle Adela Zamudio #1857</p>
+            <p class="card-desc">Auténtica picantería cochabambina. Sopa de maní, pique a lo macho y chicha servida como en los viejos tiempos.</p>
+            <a href="#contacto" class="card-btn">Ver más →</a>
+          </div>
+        </div>
+
+        <div class="card rest-card reveal" data-delay="200">
+          <div class="card-img">
+            <div class="card-category">🍕 Internacional</div>
+            <!-- ✅ REEMPLAZA "images/restaurante-cantonata.png" con tu ilustración -->
+            <img
+              src="https://i.pinimg.com/1200x/04/d8/e9/04d8e92f16d0bbbdb77dc50bedd00d7c.jpg"
+              class="card-illustration-img"
+            />
+          </div>
+          <div class="card-body">
+            <div class="card-rating">⭐ 4.7</div>
+            <h3 class="card-name">La Cantonata</h3>
+            <p class="card-type">Italiana · Fusión andina</p>
+            <p class="card-location">📍 España 409, Cochabamba</p>
+            <p class="card-desc">Pizza artesanal en horno de leña con ingredientes bolivianos. La combinación perfecta entre Italia y los Andes.</p>
+            <a href="#contacto" class="card-btn">Ver más →</a>
+          </div>
+        </div>
+
+        <div class="card rest-card reveal" data-delay="300">
+          <div class="card-img">
+            <div class="card-category">🍺 Bar & Grill</div>
+            <!-- ✅ REEMPLAZA "images/restaurante-arcangel.png" con tu ilustración -->
+            <img
+              src="https://i.pinimg.com/1200x/2b/d3/e2/2bd3e2f068448ef39e14ced9be50edce.jpg"
+              alt="El Arcángel Craft Bar"
+              class="card-illustration-img"
+            />
+          </div>
+          <div class="card-body">
+            <div class="card-rating">⭐ 4.6</div>
+            <h3 class="card-name">Plaza de comidas Paseo Aranjuez</h3>
+            <p class="card-type">Bar · Cerveza / Grill </p>
+            <p class="card-location">📍Av. América #488 Esq, C. Pantaleon Dalence, Cochabamba</p>
+            <p class="card-desc">Bar con ambiente colonial y las mejores cervezas artesanales bolivianas. Live music los fines de semana.</p>
+            <a href="#contacto" class="card-btn">Ver más →</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       ACTIVIDADES TURÍSTICAS
+  ============================================================ -->
+  <section class="section actividades-section" id="actividades">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">🗺️ Explorar</span>
+        <h2 class="section-title">Actividades<br/><em>Turísticas</em></h2>
+        <p class="section-desc">
+          Desde el Cristo más alto del mundo hasta el mercado más grande de Sudamérica.
+          Cochabamba tiene todo para sorprenderte.
+        </p>
+      </div>
+
+      <div class="actividades-grid">
+
+        <div class="act-card reveal" data-delay="0">
+          <!-- ✅ REEMPLAZA "images/actividad-cristo.png" con tu ilustración -->
+          <div class="act-icon-wrap act-icon-img-wrap">
+            <img src="https://i.pinimg.com/1200x/98/ce/bd/98cebd580f337e6595c8aa0c81b64dc9.jpg" alt="Cristo de la Concordia" class="act-illustration-img" />
+          </div>
+          <div class="act-body">
+            <h3 class="act-title">Cristo de la Concordia</h3>
+            <p class="act-desc">El Cristo más alto del mundo (34.2m). Sube a pie o en teleférico y disfruta la vista panorámica de toda Cochabamba.</p>
+            <div class="act-meta">
+              <span class="act-tag">🕐 8:00 – 18:00</span>
+              <span class="act-tag">💰 Bs 15 teleférico</span>
+            </div>
+            <div class="act-contact">📞 +591 4 440-0000</div>
+            <a href="#contacto" class="btn-act">Reservar visita →</a>
+          </div>
+        </div>
+
+        <div class="act-card reveal" data-delay="100">
+          <!-- ✅ REEMPLAZA "images/actividad-cancha.png" con tu ilustración -->
+          <div class="act-icon-wrap act-icon-img-wrap">
+            <img src="https://media-cdn.tripadvisor.com/media/photo-s/01/6b/5a/88/mercado-la-cancha.jpg" alt="La Cancha" class="act-illustration-img" />
+          </div>
+          <div class="act-body">
+            <h3 class="act-title">La Cancha</h3>
+            <p class="act-desc">El mercado más grande de Sudamérica. Un laberinto de colores, sabores y culturas donde encontrarás de todo a precios únicos.</p>
+            <div class="act-meta">
+              <span class="act-tag">🕐 6:00 – 18:00</span>
+              <span class="act-tag">💰 Entrada libre</span>
+            </div>
+            <div class="act-contact">📍 Av. República, Centro</div>
+            <a href="#contacto" class="btn-act">Más información →</a>
+          </div>
+        </div>
+
+        <div class="act-card reveal" data-delay="200">
+          <!-- ✅ REEMPLAZA "images/actividad-tunari.png" con tu ilustración -->
+          <div class="act-icon-wrap act-icon-img-wrap">
+            <img src="https://www.laregion.bo/wp-content/uploads/2022/08/tunari.jpg" alt="Parque Tunari" class="act-illustration-img" />
+          </div>
+          <div class="act-body">
+            <h3 class="act-title">Parque Tunari</h3>
+            <p class="act-desc">Parque nacional a minutos del centro. Ideal para senderismo, ciclismo y observación de flora y fauna andina única.</p>
+            <div class="act-meta">
+              <span class="act-tag">🕐 Todo el día</span>
+              <span class="act-tag">💰 Bs 5 ingreso</span>
+            </div>
+            <div class="act-contact">📞 +591 4 452-1111</div>
+            <a href="#contacto" class="btn-act">Planificar ruta →</a>
+          </div>
+        </div>
+
+        <div class="act-card reveal" data-delay="300">
+          <!-- ✅ REEMPLAZA "images/actividad-recoleta.png" con tu ilustración -->
+          <div class="act-icon-wrap act-icon-img-wrap">
+            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/19/58/62/f5/img-20190901-131048-largejpg.jpg?w=1200&h=-1&s=1" alt="La Recoleta" class="act-illustration-img" />
+          </div>
+          <div class="act-body">
+            <h3 class="act-title">La Recoleta</h3>
+            <p class="act-desc">Mirador y convento histórico del siglo XVII. Arquitectura colonial impresionante con vista al valle cochabambino.</p>
+            <div class="act-meta">
+              <span class="act-tag">🕐 9:00 – 17:00</span>
+              <span class="act-tag">💰 Bs 8 museo</span>
+            </div>
+            <div class="act-contact">📞 +591 4 425-0000</div>
+            <a href="#contacto" class="btn-act">Ver horarios →</a>
+          </div>
+        </div>
+
+        <div class="act-card reveal" data-delay="400">
+          <!-- ✅ REEMPLAZA "images/actividad-festival.png" con tu ilustración -->
+          <div class="act-icon-wrap act-icon-img-wrap">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOzHXG6gmKQCXLI4wvxoET0cJDTryFRz8O9w&s" alt="Festivales y Gastronomía" class="act-illustration-img" />
+          </div>
+          <div class="act-body">
+            <h3 class="act-title">Festivales y Gastronomía</h3>
+            <p class="act-desc">La Festividad de la Virgen de Urkupiña (agosto) es una de las fiestas más grandes de Bolivia. Danzas, música y chicha interminable.</p>
+            <div class="act-meta">
+              <span class="act-tag">📅 Agosto · Todo el año</span>
+              <span class="act-tag">💰 Entrada libre</span>
+            </div>
+            <div class="act-contact">📍 Quillacollo, Cbba</div>
+            <a href="#contacto" class="btn-act">Ver calendario →</a>
+          </div>
+        </div>
+
+        <div class="act-card reveal" data-delay="500">
+          <!-- ✅ REEMPLAZA "images/actividad-chicha.png" con tu ilustración -->
+          <div class="act-icon-wrap act-icon-img-wrap">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYOKT19US8J8m_xllgcMOV6QG151dg8BXs_Q&s" alt="Ruta de la Chicha" class="act-illustration-img" />
+          </div>
+          <div class="act-body">
+            <h3 class="act-title">Ruta de la Chicha</h3>
+            <p class="act-desc">Recorre las picanterías y chicherías tradicionales. La chicha cochabambina es Patrimonio Cultural Inmaterial de Bolivia.</p>
+            <div class="act-meta">
+              <span class="act-tag">🕐 10:00 – 20:00</span>
+              <span class="act-tag">💰 Bs 10 – 25</span>
+            </div>
+            <div class="act-contact">📞 +591 4 450-2222</div>
+            <a href="#contacto" class="btn-act">Unirse a la ruta →</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       TRANSPORTE
+  ============================================================ -->
+  <section class="section transporte-section" id="transporte">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">🚗 Movilidad</span>
+        <h2 class="section-title">Opciones de<br/><em>Transporte</em></h2>
+        <p class="section-desc">
+          Moverse por Cochabamba es fácil y accesible. Desde micros hasta apps modernas,
+          aquí todo lo que necesitas saber.
+        </p>
+      </div>
+
+      <div class="transport-grid">
+
+        <div class="transport-card reveal" data-delay="0">
+          <div class="tc-header" style="background:#f59639;">
+            <div class="tc-icon">🚕</div>
+            <div class="tc-name">Taxis</div>
+          </div>
+          <div class="tc-body">
+            <div class="tc-price">Bs 8 – 25</div>
+            <div class="tc-detail">Precio por carrera según distancia</div>
+            <div class="tc-row"><span>🕐</span><span>24 horas disponibles</span></div>
+            <div class="tc-row"><span>📞</span><span>Radio Taxi Sur: 4-440-4444</span></div>
+            <div class="tc-row"><span>📞</span><span>Radio Taxi Norte: 4-430-3333</span></div>
+            <a href="tel:+59144404444" class="tc-btn">📞 Llamar ahora</a>
+            <a href="https://wa.me/59170000001" class="tc-btn tc-btn-wa">💬 WhatsApp</a>
+          </div>
+        </div>
+
+        <div class="transport-card reveal" data-delay="100">
+          <div class="tc-header" style="background:#e1632d;">
+            <div class="tc-icon">🚌</div>
+            <div class="tc-name">Micros</div>
+          </div>
+          <div class="tc-body">
+            <div class="tc-price">Bs 2 – 3</div>
+            <div class="tc-detail">Tarifa fija por zona urbana</div>
+            <div class="tc-row"><span>🕐</span><span>5:00 – 22:00 horas</span></div>
+            <div class="tc-row"><span>🗺️</span><span>+80 líneas en toda la ciudad</span></div>
+            <div class="tc-row"><span>ℹ️</span><span>Pago en efectivo al conductor</span></div>
+            <a href="#contacto" class="tc-btn">Ver rutas</a>
+          </div>
+        </div>
+
+        <div class="transport-card reveal" data-delay="200">
+          <div class="tc-header" style="background:#476029;">
+            <div class="tc-icon">🚐</div>
+            <div class="tc-name">Trufis</div>
+          </div>
+          <div class="tc-body">
+            <div class="tc-price">Bs 2.5 – 4</div>
+            <div class="tc-detail">Minivans con rutas fijas</div>
+            <div class="tc-row"><span>🕐</span><span>6:00 – 21:00 horas</span></div>
+            <div class="tc-row"><span>🗺️</span><span>Ruta larga entre municipios</span></div>
+            <div class="tc-row"><span>ℹ️</span><span>Ideal para Sacaba, Quillacollo</span></div>
+            <a href="#contacto" class="tc-btn">Ver rutas</a>
+          </div>
+        </div>
+
+        <div class="transport-card reveal" data-delay="300">
+          <div class="tc-header" style="background:#895a38;">
+            <div class="tc-icon">🚗</div>
+            <div class="tc-name">Alquiler de Autos</div>
+          </div>
+          <div class="tc-body">
+            <div class="tc-price">Bs 250 – 500/día</div>
+            <div class="tc-detail">Con o sin conductor</div>
+            <div class="tc-row"><span>🕐</span><span>8:00 – 18:00 horas</span></div>
+            <div class="tc-row"><span>📞</span><span>Rent-a-Car CBB: 4-422-8888</span></div>
+            <div class="tc-row"><span>📄</span><span>Requiere licencia y depósito</span></div>
+            <a href="tel:+59144228888" class="tc-btn">📞 Reservar</a>
+            <a href="https://wa.me/59170000002" class="tc-btn tc-btn-wa">💬 WhatsApp</a>
+          </div>
+        </div>
+
+        <div class="transport-card reveal" data-delay="400">
+          <div class="tc-header" style="background:#d7282f;">
+            <div class="tc-icon">📱</div>
+            <div class="tc-name">Apps</div>
+          </div>
+          <div class="tc-body">
+            <div class="tc-price">Bs 12 – 35</div>
+            <div class="tc-detail">Precio dinámico por demanda</div>
+            <div class="tc-row"><span>📱</span><span>InDriver disponible</span></div>
+            <div class="tc-row"><span>📱</span><span>Uber disponible</span></div>
+            <div class="tc-row"><span>🕐</span><span>24 horas disponibles</span></div>
+            <a href="#contacto" class="tc-btn">Descargar apps</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       HOTELES
+  ============================================================ -->
+  <section class="section hoteles-section" id="hoteles">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">🏨 Hospedaje</span>
+        <h2 class="section-title">Hoteles<br/><em>Recomendados</em></h2>
+        <p class="section-desc">
+          Desde boutiques de lujo hasta hostales con encanto, Cochabamba ofrece opciones para
+          cada presupuesto y estilo de viajero.
+        </p>
+      </div>
+
+      <div class="hoteles-slider" id="hotelesSlider">
+        <div class="hoteles-track" id="hotelesTrack">
+
+          <div class="hotel-card">
+            <div class="hotel-img">
+              <div class="hotel-stars">★★★★★</div>
+              <!-- ✅ REEMPLAZA "images/hotel-portales.png" con tu ilustración -->
+              <img
+                src="https://i.pinimg.com/736x/07/ad/23/07ad23a2cd7de0ed064aa5418dd86818.jpg"
+                alt="Hotel Portales Cochabamba"
+                class="hotel-illustration-img"
+              />
+            </div>
+            <div class="hotel-body">
+              <h3 class="hotel-name">Hotel Portales Cochabamba</h3>
+              <div class="hotel-stars-text">★★★★★</div>
+              <div class="hotel-price">Bs 450 <span>/noche</span></div>
+              <div class="hotel-location">📍 Av. Pando 1271, Cochabamba</div>
+              <div class="hotel-contact">📞 +591 4 428-6000</div>
+              <a href="#contacto" class="hotel-btn">Reservar →</a>
+            </div>
+          </div>
+
+          <div class="hotel-card">
+            <div class="hotel-img">
+              <div class="hotel-stars">★★★★</div>
+              <!-- ✅ REEMPLAZA "images/hotel-diplomat.png" con tu ilustración -->
+              <img
+                src="https://i.pinimg.com/736x/a8/4e/8b/a84e8bb2fc5463dedf8ea66e82524ed4.jpg"
+                />
+
+            </div>
+            <div class="hotel-body">
+              <h3 class="hotel-name">Hotel Diplomat</h3>
+              <div class="hotel-stars-text">★★★★</div>
+              <div class="hotel-price">Bs 280 <span>/noche</span></div>
+              <div class="hotel-location">📍 Calle Aguirre 330, Centro</div>
+              <div class="hotel-contact">📞 +591 4 425-0851</div>
+              <a href="#contacto" class="hotel-btn">Reservar →</a>
+            </div>
+          </div>
+
+          <div class="hotel-card">
+            <div class="hotel-img">
+              <div class="hotel-stars">★★★★</div>
+              <!-- ✅ REEMPLAZA "images/hotel-casadecampo.png" con tu ilustración -->
+              <img
+                src="https://i.pinimg.com/736x/9a/64/dd/9a64ddc24db4cf5b11e5ec072b241eb1.jpg"
+                alt="Casa de Campo Boutique"
+                class="hotel-illustration-img"
+              />
+            </div>
+            <div class="hotel-body">
+              <h3 class="hotel-name">Casa de Campo Boutique</h3>
+              <div class="hotel-stars-text">★★★★</div>
+              <div class="hotel-price">Bs 320 <span>/noche</span></div>
+              <div class="hotel-location">📍 Km 10, Sacaba</div>
+              <div class="hotel-contact">📞 +591 4 461-5500</div>
+              <a href="#contacto" class="hotel-btn">Reservar →</a>
+            </div>
+          </div>
+
+          <div class="hotel-card">
+            <div class="hotel-img">
+              <div class="hotel-stars">★★★</div>
+              <!-- ✅ REEMPLAZA "images/hotel-colonial.png" con tu ilustración -->
+              <img
+                src="https://i.pinimg.com/736x/6f/23/2e/6f232ee332595828cb9699df128d04bf.jpg"
+                alt="Hostal Colonial"
+                class="hotel-illustration-img"
+              />
+            </div>
+            <div class="hotel-body">
+              <h3 class="hotel-name">Hostal Colonial</h3>
+              <div class="hotel-stars-text">★★★</div>
+              <div class="hotel-price">Bs 120 <span>/noche</span></div>
+              <div class="hotel-location">📍 Calle Nataniel Aguirre, Centro</div>
+              <div class="hotel-contact">📞 +591 4 422-1100</div>
+              <a href="#contacto" class="hotel-btn">Reservar →</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <!-- Slider controls -->
+      <div class="slider-controls">
+        <button class="slider-btn" id="sliderPrev" aria-label="Anterior">‹</button>
+        <div class="slider-dots" id="sliderDots"></div>
+        <button class="slider-btn" id="sliderNext" aria-label="Siguiente">›</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CTA BANNER
+  ============================================================ -->
+  <section class="cta-banner" id="contacto">
+    <div class="cta-blob"></div>
+    <div class="container">
+      <div class="cta-inner reveal">
+        <div class="cta-icon">🌄</div>
+        <h2 class="cta-title">¿Listo para tu aventura<br/>en Cochabamba?</h2>
+        <p class="cta-sub">Contáctanos y diseñamos tu itinerario perfecto. Somos locales, somos K'ochalas.</p>
+        <div class="cta-actions">
+          <a href="https://wa.me/59170123456" class="btn-primary btn-big">
+            💬 WhatsApp
+          </a>
+          <a href="mailto:hola@kochalatrip.bo" class="btn-ghost btn-big">
+            ✉️ Email
+          </a>
+        </div>
+        <div class="cta-social">
+          <a href="#" class="social-link">Instagram</a>
+          <span>·</span>
+          <a href="#" class="social-link">Facebook</a>
+          <span>·</span>
+          <a href="#" class="social-link">TikTok</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <!-- ✅ REEMPLAZA "images/logo.png" con la ruta a tu logo (versión clara para fondo oscuro) -->
+            <img src="./images/logo.png" alt="K'ochala Trip Logo" class="footer-logo-img" />
+            <span class="logo-k">K'</span><span class="logo-ochala">ochala</span>
+            <span class="logo-trip">Trip</span>
+          </div>
+          <p class="footer-tagline">
+            "Conocer y explorar Cochabamba es la mejor aventura que puedes tener."
+          </p>
+          <div class="footer-socials">
+            <a href="#" class="fsocial">IG</a>
+            <a href="#" class="fsocial">FB</a>
+            <a href="#" class="fsocial">TK</a>
+            <a href="#" class="fsocial">YT</a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h4>Explorar</h4>
+          <ul>
+            <li><a href="#historia">Historia</a></li>
+            <li><a href="#restaurantes">Restaurantes</a></li>
+            <li><a href="#actividades">Actividades</a></li>
+            <li><a href="#transporte">Transporte</a></li>
+            <li><a href="#hoteles">Hoteles</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Contacto</h4>
+          <ul>
+            <li>📍 Cochabamba, Bolivia</li>
+            <li>📞 +591 70-123-456</li>
+            <li>✉️ hola@kochalatrip.bo</li>
+            <li>🌐 www.kochalatrip.bo</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 K'ochala Trip · Hecho con ❤️ en Cochabamba, Bolivia</span>
+        <span>Turismo · Exploración · Identidad Local</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Botón volver arriba -->
+  <button class="back-to-top" id="backToTop" aria-label="Volver arriba">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
